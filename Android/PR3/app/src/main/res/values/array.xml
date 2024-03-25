@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Course">
+        <item>B.Tech</item>
+        <item>M.Tech</item>
+        <item>BBA</item>
+        <item>B.Com</item>
+        <item>B.Sc</item>
+        <item>M.Sc</item>
+        <item>B.PT</item>
+        <item>B.Phrama</item>
+    </string-array>
+</resources>

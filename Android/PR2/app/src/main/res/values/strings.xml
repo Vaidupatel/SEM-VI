@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PR2</string>
+    <string name="enrollment">202103103510508</string>
+    <string name="heading_1">Registration Form</string>
+    <string name="heading_3">Gender</string>
+    <string name="button_text_1">Submit</string>
+    <string name="button_text_2">Reset</string>
+    <string name="gender_2">Female</string>
+    <string name="gender_1">Male</string>
+</resources>

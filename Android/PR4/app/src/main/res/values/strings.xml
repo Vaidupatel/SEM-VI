@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PR4</string>
+    <string name="enrollment">202103103510508</string>
+    <string name="heading_1">Registration Form</string>
+    <string name="heading_2">Login</string>
+    <string name="btn_1">Signin</string>
+    <string name="text_1">"You are here! Mean you have logged in "</string>
+</resources>
