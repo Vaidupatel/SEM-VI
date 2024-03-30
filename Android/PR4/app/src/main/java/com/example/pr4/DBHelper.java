@@ -19,7 +19,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
-    MyDB.execSQL("CREATE TABLE users(username TEXT PRIMARY KEY,email TEXT,dob TEXT ,phone TEXT,address TEXT,password TEXT)");
+    MyDB.execSQL("CREATE TABLE users(username TEXT PRIMARY KEY,password TEXT)");
     }
 
     @Override
@@ -27,14 +27,10 @@ public class DBHelper extends SQLiteOpenHelper {
     MyDB.execSQL("drop Table if exists users");
     }
 
-    public Boolean insertData(String username,String email, String dob,Integer phone,String address,String password){
+    public Boolean insertData(String username,String password){
         SQLiteDatabase MyDB =this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("username",username);
-        contentValues.put("email",email);
-        contentValues.put("dob",dob);
-        contentValues.put("phone",phone);
-        contentValues.put("address",address);
         contentValues.put("password",password);
 
         long result = MyDB.insert("users",null,contentValues);
@@ -43,6 +39,13 @@ public class DBHelper extends SQLiteOpenHelper {
             return true;
 
     }
+    public boolean deleteData(String username) {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        long result = MyDB.delete("users", "username=?", new String[]{username});
+        MyDB.close();
+        return result != 0;
+    }
+
 
     public Boolean checkusername(String username){
         SQLiteDatabase MyDB = this.getWritableDatabase();
